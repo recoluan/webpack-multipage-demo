@@ -1,0 +1,84 @@
+.home-wrapper {
+  #home {
+    position: relative;
+    overflow: hidden;
+    font-weight: 100;
+    @include fullscreen-bg('/index/home/bg_shouye.png', 700px);
+    > .title {
+      margin-top: 235px;
+      text-align: center;
+      font-size:60px;
+      color:rgba(255,255,255,1);
+      line-height:60px;
+      letter-spacing:10px;
+    }
+    .desc-one {
+      margin: 40px 0 60px;
+      text-align: center;
+      li {
+        display: inline-block;
+        font-size:22px;
+        font-weight:100;
+        color:rgba(255,255,255,1);
+        line-height:22px;
+        letter-spacing:3px;
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+      }
+    }
+    > .btn {
+      margin: 0 auto;
+    }
+    .desc-two {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      text-align: center;
+      height:67px;
+      background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+      li {
+        position: relative;
+        display: inline-block;
+        height:67px;
+        line-height: 67px;
+        font-size:16px;
+        color:rgba(255,255,255,1);
+        line-height:22px;
+        letter-spacing:3px;
+        &:not(:last-child) {
+          margin-right: 120px;
+          &:after {
+            position: absolute;
+            top: 28px;
+            right: -60px;
+            display: block;
+            content: '';
+            width: 0;
+            height: 12px;
+            border-left: 1px solid #fff;
+          }
+        }
+        .icon {
+          display: inline-block;
+          vertical-align: middle;
+          &.icon1 {
+            @include bg-img('/index/home/icon_jishu.png', 16px, 16px)
+          }
+          &.icon2 {
+            @include bg-img('/index/home/icon_fugaihangye.png', 16px, 16px)
+          }
+          &.icon3 {
+            @include bg-img('/index/home/icon_hezuo.png', 16px, 16px)
+          }
+        }
+        .text {
+          vertical-align: middle;
+          line-height: 67px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+@import '~@assets/css/index.scss';
+
+@import './header.scss';
+@import './home.scss';
+
+.home-wrapper {
+  position: relative;
+  font-weight:400;
+  font-weight:400;
+  background: #fff;
+}
+
+#loading{
+  background-color: rgba(0,191,0,1);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  margin-top: 0px;
+  top: 0px;
+  #loading-center{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    #loading-center-absolute {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 50px;
+      width: 150px;
+      margin-top: -25px;
+      margin-left: -75px;
+      .object{
+        width: 8px;
+        height: 50px;
+        margin-right:5px;
+        background-color: #FFF;
+        -webkit-animation: animate 1s infinite;
+        animation: animate 1s infinite;
+        float: left;
+        &:last-child {
+          margin-right: 0px;
+        }
+        &:nth-child(10){
+          -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+        }
+        &:nth-child(9){
+          -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+        }
+        &:nth-child(8){
+          -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+        }
+        &:nth-child(7){
+          -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+        }
+        &:nth-child(6){
+          -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+        }
+        &:nth-child(5){
+          -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+        }
+        &:nth-child(4){
+          -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+        }
+        &:nth-child(3){
+          -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+        }
+        &:nth-child(2){
+          -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+        }
+        @-webkit-keyframes animate {
+          50% {
+            -ms-transform: translateX(-25px) scaleY(0.5);
+            -webkit-transform: translateX(-25px) scaleY(0.5);
+            transform: translateX(-25px) scaleY(0.5);
+          }
+        }
+        @keyframes animate {
+          50% {
+            -ms-transform: translateX(-25px) scaleY(0.5);
+            -webkit-transform: translateX(-25px) scaleY(0.5);
+            transform: translateX(-25px) scaleY(0.5);
+          }
+        }
+      }
+    }
+  }
+}
+
+#wechat {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.4);
+  .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 360px;
+    height: 450px;
+    background: #fff;
+    h3 {
+      margin: 30px 0 20px;
+      text-align: center;
+      font-size:26px;
+      font-weight:600;
+      color:rgba(51,51,51,1);
+      line-height:24px;
+      letter-spacing:1px;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 220px;
+      height: 295px;
+    }
+    .desc {
+      margin-top: 30px;
+      text-align: center;
+      font-size:16px;
+      font-weight:400;
+      color:rgba(51,51,51,1);
+      line-height:16px;
+      letter-spacing:1px;
+    }
+    .btn-close {
+      position: absolute;
+      right: -40px;
+      top: -26px;
+      display: block;
+      cursor: pointer;
+      @include bg-img('/index/home/icon_guanbi.png', 26px, 26px);
+    }
+  }
+}
